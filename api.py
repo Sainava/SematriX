@@ -16,7 +16,7 @@ def query_arxiv_papers(topic_str, max_results):
 
     papers_list = []
     try:
-        client = arxiv.Client()  # ✅ Remove 'headers'
+        client = arxiv.Client()
         print(f"Querying ArXiv with search term: {search_term}")  # Debugging log
 
         for result in client.results(search_query):
@@ -52,7 +52,7 @@ def query_papers():
             return jsonify({"error": "Invalid request, 'query' field is required"}), 400
 
         topic = data.get("query", "Artificial Intelligence")  # Default topic
-        max_results = data.get("max_results", 2)  # Default max results
+        max_results = int(data.get("max_results", 2))  # ✅ Convert to integer
 
         papers = query_arxiv_papers(topic, max_results)
         return jsonify({"response": papers})
