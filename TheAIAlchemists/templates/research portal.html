@@ -75,7 +75,7 @@
             display: block;
             width: 100%;
             padding: 12px;
-            background-color: #4CAF50;
+            background-color: #BF3131;
             color: white;
             border: none;
             border-radius: 4px;
@@ -83,7 +83,7 @@
             font-size: 16px;
         }
         .submit-btn:hover {
-            background-color: #45a049;
+            background-color: #7D0A0A;
         }
         @media (max-width: 1200px) {
             .parameter-group {
@@ -190,9 +190,11 @@
             event.preventDefault();      
             // Here you would typically send the input values to your model and get the output
             // For demonstration, we'll just set some dummy output values
-            document.querySelector('#output1 span').textContent = '0.1234567';
-            document.querySelector('#output2 span').textContent = '0.2345678';
-            document.querySelector('#output3 span').textContent = '0.3456789';
+            document.querySelector('#output1 span').textContent = 'John Doe, Jane Doe';
+            document.querySelector('#output2 span').textContent = '2021-01-01';
+            document.querySelector('#output3 span').textContent = 'Paper Title';
+            document.querySelector('#output3 span').textContent = 'Abstract';
+            document.querySelector('#output3 span').textContent = 'DOI';
         });
     </script>
 </body>
